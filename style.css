@@ -29,9 +29,9 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "gauche droite";
   position: absolute;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .gauche {
@@ -227,7 +227,7 @@ img {
 }
 
 /* Media Query pour les écrans plus petits */
-@media (max-width: 600px) {
+@media (min-width: 360px) and (max-width: 1440px) {
   main {
     grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
     grid-template-areas:
@@ -235,8 +235,12 @@ img {
       "droite"; /* La partie gauche au-dessus de la partie droite */
       width: 500px;
       height: 960px;
-  }
 
+  }
+  body {
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+  }
+      
   .summary {
     margin-left: 35px;
     margin-top: 20px;
