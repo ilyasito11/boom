@@ -19,7 +19,7 @@ html {
 }
 
 main {
-  background: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
   width: 700px;
   height: 500px;
   border-radius: 30px;
@@ -227,7 +227,7 @@ img {
 }
 
 /* Media Query pour les écrans plus petits */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   main {
     grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
     grid-template-areas:
