@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "test";
+  src: url(assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+@font-face {
+  font-family: "extra";
+  src: url(assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "medium";
+  src: url(assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+ /* Évite les barres de défilement si nécessaire */
+}
+
+main {
+  background: rgb(255, 255, 255);
+  width: 700px;
+  height: 500px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 7px #4534f214;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "gauche droite";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gauche {
+  grid-area: gauche;
+}
+
+.droite {
+  grid-area: droite;
+}
+.carte {
+  background: linear-gradient(to top, #4233f0, #6541fd);
+  border-radius: 30px;
+}
+
+.result {
+  color: rgba(255, 255, 255, 0.651);
+  font-family: "test";
+  font-weight: 100;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  background: linear-gradient(to top, #4633ed00, #4c21c8);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 35px;
+  color: white;
+  font-family: "extra";
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.of {
+  color: rgba(255, 255, 255, 0.308);
+  font-family: "test";
+  font-weight: 100;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.great {
+  color: rgb(255, 255, 255);
+  font-family: "medium";
+  font-weight: 100;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+p {
+  font-family: "medium";
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.521);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.summary {
+  color: black;
+  font-family: "extra";
+  font-size: 1.5rem;
+  display: flex;
+  margin-left: 26px;
+  margin-top: 40px;
+}
+
+li {
+  list-style: none;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column-reverse;
+  align-content: center;
+}
+
+.list1 {
+  display: flex;
+  background-color: rgba(255, 0, 0, 0.151);
+  font-family: "test";
+  color: #e07373;
+  font-size: 1.25rem;
+  height: 55px;
+  width: 300px;
+  align-items: center;
+  margin: 10px 0 0 0;
+  border-radius: 15px;
+}
+
+.list2 {
+  display: flex;
+  background-color: rgba(255, 255, 0, 0.151);
+  font-family: "test";
+  color: #ebc271;
+  font-size: 1.25rem;
+  height: 55px;
+  align-items: center;
+  margin: 20px 0 0 0;
+  border-radius: 15px;
+}
+
+.list3 {
+  display: flex;
+  background-color: rgba(0, 128, 0, 0.151);
+  font-family: "test";
+  color: #00be85;
+  font-size: 1.25rem;
+  height: 55px;
+  align-items: center;
+  margin: 20px 0 0 0;
+  border-radius: 15px;
+}
+
+.list4 {
+  display: flex;
+  background-color: rgba(0, 0, 255, 0.151);
+  font-family: "test";
+  color: #0003c7;
+  font-size: 1.25rem;
+  height: 55px;
+  align-items: center;
+  margin: 20px 0 0 0;
+  border-radius: 15px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; /* Supprimer les puces par défaut */
+}
+
+img {
+  margin: 0 12px 0 12px;
+}
+
+.cent {
+  color: black;
+  margin-left: auto;
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+
+.cente {
+  color: rgba(128, 128, 128, 0.671);
+  margin-right: 5px;
+  font-size: 1.1rem;
+}
+
+.slash {
+  color: rgba(128, 128, 128, 0.671);
+  margin-right: 3px;
+  font-size: 1.1rem;
+}
+
+#submit {
+  display: flex;
+  width: 300px;
+  height: 55px;
+  margin: 0 auto;
+  margin-top: 35px;
+  background: #303b59;
+  border-radius: 40px;
+  font-family: "medium";
+  color: white;
+  font-size: 1rem;
+  border: 0;
+}
+
+#submit:hover {
+  background: linear-gradient(to top, #4233f0, #6541fd);
+  transition: 0.2s;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+/* Media Query pour les écrans plus petits */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    grid-template-areas:
+      "gauche"
+      "droite"; /* La partie gauche au-dessus de la partie droite */
+      width: 500px;
+      height: 960px;
+  }
+
+  .summary {
+    margin-left: 35px;
+    margin-top: 20px;
+  }
+.gauche{
+  border-radius: 0 0 30px 30px;
+}
+  .list1,.list2,.list3,.list4{
+    width: 430px;
+  }
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
